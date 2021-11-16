@@ -1,0 +1,7 @@
+POST http://localhost:3005/api/superpowers HTTP/1.1
+Content-Type: application/json
+
+{
+  "name_power":"energy absorption and healing factor",
+  "superheroId":1
+}
