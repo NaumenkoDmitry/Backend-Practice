@@ -2,7 +2,8 @@ const { Superhero } = require("../models");
 
 module.exports.getHero = async (req, res, next) => {
   try {
-    const hero = await Superhero.findAll();
+    const { body } = req;
+    const hero = await Superhero.findAll({ ...body });
     res.send(hero);
   } catch (error) {
     next(error);

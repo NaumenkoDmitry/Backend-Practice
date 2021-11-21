@@ -5,10 +5,10 @@ module.exports.createPowers = async (req, res, next) => {
     const { body } = req;
 
     const powers = await superpowers.create(body);
-    const supPower = await Superhero.findByPk(body.superheroId);
-    await powers.addPower(supPower);
-    res.send(newTask);
+
+    res.send({ data: powers });
   } catch (err) {
     next(err);
   }
 };
+module.exports.deletePowers = async (req, res, next) => {};

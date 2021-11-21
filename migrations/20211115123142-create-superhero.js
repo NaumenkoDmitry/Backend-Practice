@@ -12,6 +12,7 @@ module.exports = {
         type: Sequelize.STRING,
         field: "nick_name",
         allowNull: false,
+        unique: true,
       },
       realName: {
         type: Sequelize.STRING,
@@ -23,20 +24,11 @@ module.exports = {
         field: "origin_description",
         allowNull: false,
       },
-      /*  superpowerId: {
-        type: Sequelize.INTEGER,
-        field: "Super_Power",
-        allowNull: false,
-      }, */
       catchPhrase: {
         type: Sequelize.STRING,
         field: "catch_phrase",
         allowNull: false,
       },
-      /* image: {
-        type: Sequelize.STRING,
-        field: "image",
-      }, */
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

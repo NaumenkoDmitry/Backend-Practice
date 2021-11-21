@@ -10,8 +10,7 @@ module.exports = {
       },
       superheroId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        primaryKey: true,
+        allowNull: true,
         field: "super_hero_Id",
         references: {
           model: {

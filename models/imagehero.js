@@ -9,10 +9,20 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      imagehero.belongsTo(models.Superhero);
     }
   }
   imagehero.init(
     {
+      superheroId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: true,
+          notEmpty: true,
+        },
+        field: "superheroId",
+      },
       image: {
         type: DataTypes.STRING,
         field: "image",
